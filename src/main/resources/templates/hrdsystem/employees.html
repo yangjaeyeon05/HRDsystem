@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:replace="~{/header.html:: header}"></div>
+    <form>
+        <h3>사원등록</h3>
+        사원명 : <input id="ename"/> <br/>
+        연락처 : <input id="econtact"/> <br/>
+        직급 : <input id="position"/> <br/>
+        부서명 : <input id="dname"/> <br/>
+        <button type="button" onclick="eAdd()"> 등록 </button>
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <tr> <td> 사원번호 </td> <td> 사원명 </td> <td> 연락처 </td> <td> 직급 </td> <td> 부서명 </td></tr>
+            </thead>
+            <tbody id="eBox">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="~{/footer.html:: footer}"></div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/hrdsystem/employees.js"> </script>
+</body>
+</html>
